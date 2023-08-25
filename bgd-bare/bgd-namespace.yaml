@@ -1,8 +1,0 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    app.kubernetes.io/instance: bgd
-    argocd.argoproj.io/managed-by: openshift-gitops
-  name: bgd
