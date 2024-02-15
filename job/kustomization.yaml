@@ -7,4 +7,3 @@ resources:
 - test-job.yaml
 - test-sa-rbac.yaml
 - test-sa.yaml
-- test-cronjob.yaml
