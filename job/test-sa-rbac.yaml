@@ -66,3 +66,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: openshift-gitops-argocd-server
+  namespace: openshift-gitops
