@@ -44,11 +44,11 @@ metadata:
 rules:
 - apiGroups:
   - batch
-resources:
+  resources:
   - cronjobs
   - jobs
   - cronjobs/finalizers
-verbs:
+  verbs:
   - create
   - delete
   - deletecollection
