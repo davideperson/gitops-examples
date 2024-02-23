@@ -35,3 +35,35 @@ subjects:
 - kind: ServiceAccount
   name: pod-exec-sa
   namespace: welcome-app
+
+---
+kind: Role
+metadata:
+  name: openshift-gitops-argocd-server-addon
+rules:
+- apiGroups:
+  - batch
+resources:
+  - cronjobs
+  - jobs
+  - cronjobs/finalizers
+verbs:
+  - create
+  - delete
+  - deletecollection
+  - patch
+  - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: openshift-gitops-argocd-server-addon
+  namespace: welcome-app
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: openshift-gitops-argocd-server-addon
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-server
+  namespace: openshift-gitops
