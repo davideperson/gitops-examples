@@ -47,12 +47,9 @@ rules:
   resources:
   - cronjobs
   - jobs
+  - cronjobs/finalizers
   verbs:
   - create
-  - delete
-  - deletecollection
-  - patch
-  - update
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
