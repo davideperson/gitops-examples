@@ -47,7 +47,6 @@ rules:
   resources:
   - cronjobs
   - jobs
-  - cronjobs/finalizers
   verbs:
   - create
   - delete
