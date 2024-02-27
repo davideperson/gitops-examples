@@ -38,7 +38,7 @@ subjects:
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
   name: openshift-gitops-argocd-server-addon
 rules:
@@ -53,12 +53,12 @@ rules:
   - update
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: openshift-gitops-argocd-server-addon
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: openshift-gitops-argocd-server-addon
 subjects:
 - kind: ServiceAccount
