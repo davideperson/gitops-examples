@@ -10,7 +10,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "8"
 spec:
-  host: ""
+  host: "pricelist-route-pricelist.apps.rishabhcluster.lab.upshift.rdu2.redhat.com"
   port:
     targetPort: 8080
   to:
